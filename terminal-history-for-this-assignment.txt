@@ -1,0 +1,131 @@
+Last login: Mon Nov 28 09:49:52 on ttys000
+Roberts-MacBook-Pro:~ robertcampos$ mkdir TIY Projects
+Roberts-MacBook-Pro:~ robertcampos$ cddir TIY Projects
+-bash: cddir: command not found
+Roberts-MacBook-Pro:~ robertcampos$ cd TIY Projects
+Roberts-MacBook-Pro:TIY robertcampos$ ls TIY Projects
+ls: Projects: No such file or directory
+ls: TIY: No such file or directory
+Roberts-MacBook-Pro:TIY robertcampos$ mkdir Projects
+Roberts-MacBook-Pro:TIY robertcampos$ ls Projects
+Roberts-MacBook-Pro:TIY robertcampos$ ls Prrojects
+ls: Prrojects: No such file or directory
+Roberts-MacBook-Pro:TIY robertcampos$ ls Projects
+Roberts-MacBook-Pro:TIY robertcampos$ ls
+Projects
+Roberts-MacBook-Pro:TIY robertcampos$ ls Projects
+Roberts-MacBook-Pro:TIY robertcampos$ cd TIY/Projects
+-bash: cd: TIY/Projects: No such file or directory
+Roberts-MacBook-Pro:TIY robertcampos$ Projects git clone https://github.com/tiy-lv-java-2016-11/terminal-velocity.git
+-bash: Projects: command not found
+Roberts-MacBook-Pro:TIY robertcampos$ Projects git clone https://github.com/tiy-lv-java-2016-11/terminal-velocity.git
+-bash: Projects: command not found
+Roberts-MacBook-Pro:TIY robertcampos$ git clone https://github.com/tiy-lv-java-2016-11/terminal-velocity.git
+Cloning into 'terminal-velocity'...
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+Roberts-MacBook-Pro:TIY robertcampos$ ls
+Projects		terminal-velocity
+Roberts-MacBook-Pro:TIY robertcampos$ terminal-velocity > list-projects-directory.txt
+-bash: terminal-velocity: command not found
+Roberts-MacBook-Pro:TIY robertcampos$ cd terminal-velocity
+Roberts-MacBook-Pro:terminal-velocity robertcampos$ ls > list-projects-directory.txt
+Roberts-MacBook-Pro:terminal-velocity robertcampos$ ls
+README.md			list-projects-directory.txt
+Roberts-MacBook-Pro:terminal-velocity robertcampos$ atom joke.txt
+Roberts-MacBook-Pro:terminal-velocity robertcampos$ ls > workingDirectory.txt
+Roberts-MacBook-Pro:terminal-velocity robertcampos$ ls
+README.md			list-projects-directory.txt
+joke.txt			workingDirectory.txt
+Roberts-MacBook-Pro:terminal-velocity robertcampos$ cp /etc/hosts hosts
+Roberts-MacBook-Pro:terminal-velocity robertcampos$ ls
+README.md			joke.txt			workingDirectory.txt
+hosts				list-projects-directory.txt
+Roberts-MacBook-Pro:terminal-velocity robertcampos$ man date
+Roberts-MacBook-Pro:terminal-velocity robertcampos$ date +%s
+1480376412
+Roberts-MacBook-Pro:terminal-velocity robertcampos$ date +%s > date.txt
+Roberts-MacBook-Pro:terminal-velocity robertcampos$ ls
+README.md			hosts				list-projects-directory.txt
+date.txt			joke.txt			workingDirectory.txt
+Roberts-MacBook-Pro:terminal-velocity robertcampos$ ls *.txt
+date.txt			list-projects-directory.txt
+joke.txt			workingDirectory.txt
+Roberts-MacBook-Pro:terminal-velocity robertcampos$ ls *.txt > list-of-txt-files.txt
+Roberts-MacBook-Pro:terminal-velocity robertcampos$ ls
+README.md			joke.txt			workingDirectory.txt
+date.txt			list-of-txt-files.txt
+hosts				list-projects-directory.txt
+Roberts-MacBook-Pro:terminal-velocity robertcampos$ which java javac > where-is-my-java.txt
+Roberts-MacBook-Pro:terminal-velocity robertcampos$ ls
+README.md			joke.txt			where-is-my-java.txt
+date.txt			list-of-txt-files.txt		workingDirectory.txt
+hosts				list-projects-directory.txt
+Roberts-MacBook-Pro:terminal-velocity robertcampos$ git add .
+fatal: cannot use /Users/robertcampos/ as an exclude file
+Roberts-MacBook-Pro:terminal-velocity robertcampos$ ls
+README.md			joke.txt			where-is-my-java.txt
+date.txt			list-of-txt-files.txt		workingDirectory.txt
+hosts				list-projects-directory.txt
+Roberts-MacBook-Pro:terminal-velocity robertcampos$ git statuss
+git: 'statuss' is not a git command. See 'git --help'.
+
+Did you mean this?
+	status
+Roberts-MacBook-Pro:terminal-velocity robertcampos$ git status
+fatal: cannot use /Users/robertcampos/ as an exclude file
+Roberts-MacBook-Pro:terminal-velocity robertcampos$ git status
+fatal: cannot use /Users/robertcampos/ as an exclude file
+Roberts-MacBook-Pro:terminal-velocity robertcampos$ history | grep global
+  119  git config --global core.excludesfile ~/ .gitignore_global
+  120  git config --global core.excludesfile ~/ .gitignore_global
+  121  atom ~/.gitignore_global
+  160  history | grep global
+Roberts-MacBook-Pro:terminal-velocity robertcampos$ git config --global core.excludesfile ~/.gitignore_global
+warning: core.excludesfile has multiple values
+error: cannot overwrite multiple values with a single value
+       Use a regexp, --add or --replace-all to change core.excludesfile.
+Roberts-MacBook-Pro:terminal-velocity robertcampos$ git config --global core.excludesfile ~/.gitignore_global --replace-all
+Roberts-MacBook-Pro:terminal-velocity robertcampos$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	date.txt
+	hosts
+	joke.txt
+	list-of-txt-files.txt
+	list-projects-directory.txt
+	where-is-my-java.txt
+	workingDirectory.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+Roberts-MacBook-Pro:terminal-velocity robertcampos$ git commit -m "Made this terminal assignment more difficult."
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+	date.txt
+	hosts
+	joke.txt
+	list-of-txt-files.txt
+	list-projects-directory.txt
+	where-is-my-java.txt
+	workingDirectory.txt
+
+nothing added to commit but untracked files present
+Roberts-MacBook-Pro:terminal-velocity robertcampos$ git add .
+Roberts-MacBook-Pro:terminal-velocity robertcampos$ git commit -m "Made this terminal assignment more difficult."
+[master d3ce0c5] Made this terminal assignment more difficult.
+ 7 files changed, 24 insertions(+)
+ create mode 100644 date.txt
+ create mode 100644 hosts
+ create mode 100644 joke.txt
+ create mode 100644 list-of-txt-files.txt
+ create mode 100644 list-projects-directory.txt
+ create mode 100644 where-is-my-java.txt
+ create mode 100644 workingDirectory.txt
+Roberts-MacBook-Pro:terminal-velocity robertcampos$ atom terminal-history-for-this-assignment.txt
+Roberts-MacBook-Pro:terminal-velocity robertcampos$
